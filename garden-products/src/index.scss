@@ -1,0 +1,13 @@
+@import './assets/variables/colors';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+
+h1 {
+  color: $white-color;
+  font-size: 96px;
+  font-weight: 700;
+}

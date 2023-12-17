@@ -1,20 +1,21 @@
-@import '../../assets/variables/colors';
+@import "../../assets/variables/colors";
 
-.button{
-    padding: 16px 56px;
-    height: 58px;
-    border: none;
-    border-radius: 6px;
-    font-size: 20px;
-    font-weight: 600;
+.button {
+  padding: 16px 56px;
+  height: 58px;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
-.primary{
-    background-color: $green-color;
-    color: $white-color;
+.primary {
+  background-color: $green-color;
+  color: $white-color;
 }
 
-.secondary{
-    background-color: $white-color;
-    color: $main-text-color;
+.secondary {
+  background-color: $white-color;
+  color: $main-text-color;
+  width: 100%;
 }

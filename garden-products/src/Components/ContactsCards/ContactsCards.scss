@@ -1,0 +1,24 @@
+@import "../../assets/variables/colors";
+
+.contacts-cards {
+  border-radius: 12px;
+  background-color: $light-grey-color;
+  padding: 32px;
+  min-width: 548px;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    color: $grey-text-color;
+    margin-bottom: 16px;
+  }
+  &__content {
+    font-size: 40px;
+    font-weight: 600;
+    color: $main-text-color;
+  }
+  &__images{
+    gap: 16px;
+    display: flex;
+  }
+}

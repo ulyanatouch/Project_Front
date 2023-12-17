@@ -1,0 +1,23 @@
+@import "../../assets/variables/colors";
+
+.footer {
+  padding: 0 40px 80px 40px;
+
+  &__title {
+    color: $main-text-color;
+    font-size: 64px;
+    font-weight: 700;
+  }
+  &__cards {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 376px;
+
+    .contacts-cards:nth-child(odd) {
+      flex: 2 2 auto;
+    }
+  }
+}

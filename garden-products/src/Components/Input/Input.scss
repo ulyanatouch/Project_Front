@@ -1,0 +1,19 @@
+@import "../../assets/variables/colors";
+
+.custom-input {
+  background-color: transparent;
+  padding: 16px 32px;
+  border-color: $white-color;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+
+  &::placeholder {
+    color: $white-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

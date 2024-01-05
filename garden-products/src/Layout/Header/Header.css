@@ -1,0 +1,19 @@
+.header {
+  width: 100%;
+  height: 128px;
+  padding: 30px 40px 28px 40px;
+  border-bottom: 1px solid var(--grey-divider, #ddd);
+  background: var(--white, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 32px;
+}
+.header nav ul a {
+  color: #282828;
+  text-decoration: none;
+}/*# sourceMappingURL=Header.css.map */

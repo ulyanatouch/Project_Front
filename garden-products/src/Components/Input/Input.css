@@ -1,0 +1,18 @@
+.custom-input {
+  background-color: transparent;
+  padding: 16px 32px;
+  border-color: #fff;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+}
+.custom-input::-moz-placeholder {
+  color: #fff;
+}
+.custom-input::placeholder {
+  color: #fff;
+}
+.custom-input:focus {
+  outline: none;
+}/*# sourceMappingURL=Input.css.map */

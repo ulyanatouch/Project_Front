@@ -1,0 +1,16 @@
+.sales-block {
+  margin-bottom: 80px;
+  width: 100%;
+  padding: 0 40px;
+}
+.sales-block p {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.sales-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}/*# sourceMappingURL=Sales.css.map */

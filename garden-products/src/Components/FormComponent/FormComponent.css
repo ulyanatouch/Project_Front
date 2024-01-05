@@ -1,0 +1,9 @@
+.form-block {
+  height: 100%;
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  align-items: center;
+}/*# sourceMappingURL=FormComponent.css.map */

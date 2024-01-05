@@ -4,6 +4,10 @@
   color: #282828;
 }
 
+body {
+  margin: 0;
+}
+
 h1 {
   color: #fff;
   font-size: 96px;

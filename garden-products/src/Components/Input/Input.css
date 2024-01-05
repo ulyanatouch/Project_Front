@@ -1,18 +1,21 @@
-.custom-input {
-  background-color: transparent;
-  padding: 16px 32px;
-  border-color: #fff;
+.custom-input-container {
+  border: 1px solid #fff;
   border-radius: 6px;
   width: 100%;
-  font-size: 20px;
-  font-weight: 500;
+  margin: auto;
+  background-color: transparent;
+  padding: 16px 32px;
 }
-.custom-input::-moz-placeholder {
-  color: #fff;
-}
-.custom-input::placeholder {
-  color: #fff;
-}
-.custom-input:focus {
+
+.custom-input {
+  border: none;
   outline: none;
+  background-color: transparent;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 20px;
+  line-height: 130%;
+  font-weight: 500;
+  height: 26px;
+  color: #fff;
 }/*# sourceMappingURL=Input.css.map */

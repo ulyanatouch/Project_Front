@@ -3,5 +3,18 @@
 .categories-card{
     border-radius: 12px;
     border: 1px solid $grey-devider-color;
-    
+
+    &__img {
+        height: 284px;
+        width: 100%;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        margin-bottom: 20px;
+      }
+
+      &__title {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
 }

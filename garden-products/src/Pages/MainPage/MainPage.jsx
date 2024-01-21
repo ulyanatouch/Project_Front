@@ -8,7 +8,7 @@ const MainPage = () => {
   return (
     <div>
       <CheckoutBlock />
-      <Categories />
+      <Categories isMainPage={true}/>
       <DiscountBlock />
       <Sales />
     </div>

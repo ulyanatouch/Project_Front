@@ -1,31 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { CategoriesCard } from "../CategoriesCard/CategoriesCard";
-import "./Categories.scss"
+import "./Categories.scss";
+import { fetchCards } from "../../requests";
+import { Link } from 'react-router-dom'
 
-export const Categories = () => {
+export const Categories = ({isMainPage = false}) => {
   const [cards, setCards] = useState([]);
-  
+
   useEffect(() => {
-    const fetchCards = async () => {
-      try {
-        const response = await fetch("http://localhost:3333/categories/all");
-        const data = await response.json();
-        setCards(data);
-        console.log(data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchCards();
+    fetchCards(setCards);
   }, []);
-  
+
   return (
     <div className="categories-block">
       <p>Categories</p>
       <div className="categories-cards">
-      {cards.slice(0, 4).map((card) => (
-        <CategoriesCard key={card.id} card={card} />
-      ))}
+        {(isMainPage ? cards.slice(0, 4) : cards).map((card) => (
+          <Link to={`/categories/${card.id}`} key={card.id}>
+          <CategoriesCard key={card.id} card={card} />
+        </Link>
+        ))}
       </div>
     </div>
   );

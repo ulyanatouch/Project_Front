@@ -1,14 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import "./CategoriesPage.scss"
+import React, { useEffect, useState } from "react";
+import "./CategoriesPage.scss";
+import { PagesContainer } from "../PagesContainer/PagesContainer";
+import { fetchCategoriesById } from "../../requests";
+import { useParams } from "react-router-dom";
 
+const CategoriesPage = () => {
+  const {id} = useParams();
+  const [productsFromCategories, setCategories] = useState({category: {}, data: []});
 
-const CategoriesPage = () => (
-   <div>CategoriesPage</div>
-);
+  useEffect(() => {
+    fetchCategoriesById(id, setCategories);
+  }, []);
+return <PagesContainer title={productsFromCategories.category.title} cardsData={productsFromCategories.data} />;
+};
 
-CategoriesPage.propTypes = {};
-
-CategoriesPage.defaultProps = {};
-
-export default CategoriesPage;
+export { CategoriesPage };

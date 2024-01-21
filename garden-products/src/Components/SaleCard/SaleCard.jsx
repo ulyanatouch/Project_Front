@@ -1,8 +1,8 @@
 import React from "react";
 import "./SaleCard.scss";
 
-const SaleCard = ({ product }) => {
-  const { title, image, id, discont_price, price } = product;
+const SaleCard = ({ card }) => {
+  const { title, image, id, discont_price, price } = card;
 
   return (
     <div className="product-card">

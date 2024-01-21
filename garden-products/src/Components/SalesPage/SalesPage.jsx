@@ -1,13 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import "./SalesPage.scss"
+import React, { useEffect, useState } from "react";
+import "./SalesPage.scss";
+import { PagesContainer } from "../PagesContainer/PagesContainer";
+import { fetchProducts } from "../../requests";
 
-const SalesPage = () => (
-<div>SalesPage</div>
-);
+const SalesPage = () => {
+  const [cards, setProducts] = useState([]);
+    const productsWithDiscount = cards.filter((product) => product.discont_price)
 
-SalesPage.propTypes = {};
+  useEffect(() => {
+    fetchProducts(setProducts);
+  }, []);
 
-SalesPage.defaultProps = {};
+  return <PagesContainer title="All sales" cardsData={productsWithDiscount} />;
+};
 
-export default SalesPage;
+export { SalesPage };

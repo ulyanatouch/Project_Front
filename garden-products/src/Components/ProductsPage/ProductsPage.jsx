@@ -1,13 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import "./ProductsPage.scss"
+import React, { useEffect, useState } from "react";
+import "./ProductsPage.scss";
+import { PagesContainer } from "../PagesContainer/PagesContainer";
+import { fetchProducts } from "../../requests";
 
-const ProductsPage = () => (
-<div>ProductsPage</div>
-);
+const ProductsPage = () => {
+  const [cards, setProducts] = useState([]);
 
-ProductsPage.propTypes = {};
+  useEffect(() => {
+    fetchProducts(setProducts);
+  }, []);
 
-ProductsPage.defaultProps = {};
+  return <PagesContainer title="All products" cardsData={cards} />;
+};
 
-export default ProductsPage;
+export { ProductsPage };

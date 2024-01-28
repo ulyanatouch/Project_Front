@@ -33,6 +33,7 @@ export const fetchCards = async (setCards) => {
       const response = await fetch(`http://localhost:3333/products/${id}`);
       const data = await response.json();
       setProduct(data[0]);
+      console.log(data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }

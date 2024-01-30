@@ -9,6 +9,7 @@ import {Categories} from "./Components/Categories/Categories";
 import { SingleProductPage } from "./Pages/SingleProductPage/SingleProductPage";
 import { CategoriesPage } from "./Components/CategoriesPage/CategoriesPage";
 
+
 function App() {
   return (
     <div>

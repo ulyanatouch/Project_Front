@@ -13,26 +13,28 @@ const SingleProductPage = () => {
     fetchProductById(id, setProduct);
   }, []);
 
+  const getPriceDisplay = () => {
+    return product.discont_price ? product.discont_price : product.price;
+  };
+
   return (
     <div className="single-page-block">
       <div className="single-page-block__image">
         <img
-          src={"http://localhost:3333" + product.image}
-          alt={`Product` + product.id}
+          src={`http://localhost:3333${product.image}`}
+          alt={`Product${product.id}`}
         />
       </div>
       <div className="single-page-block-info">
         <div className="single-page-block-info__title">{product.title}</div>
         <div className="block-price">
-        <div className="block-price__price">{product.price}</div>
-        <div className="block-price__discont_price">
-          ${!product.discont_price ? product.price : product.discont_price}
-        </div>
-        <div className="block-price__sumdiscount"></div>
+          <div className="block-price__price">{product.price}</div>
+          <div className="block-price__discont_price">${getPriceDisplay()}</div>
+          <div className="block-price__sumdiscount"></div>
         </div>
         <div className="single-page-block-info__frame">
           <Counter />
-          <Button buttonClass="primary" text="Add to card" />
+          <Button buttonClass="primary" text="Add to cart" />
         </div>
         <div className="single-page-block-info__description">
           {product.description}

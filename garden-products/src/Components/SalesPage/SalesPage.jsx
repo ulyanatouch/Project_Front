@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./SalesPage.scss";
 import { PagesContainer } from "../PagesContainer/PagesContainer";
 import { fetchProducts } from "../../requests";
+import { Breadcrumbs } from "../BreadCrumbs/BreadCrumbs";
 
 const SalesPage = () => {
   const [cards, setProducts] = useState([]);
@@ -11,7 +12,12 @@ const SalesPage = () => {
     fetchProducts(setProducts);
   }, []);
 
-  return <PagesContainer title="All sales" cardsData={productsWithDiscount} />;
+  return (
+  <div>
+    <Breadcrumbs/>
+  <PagesContainer title="All sales" cardsData={productsWithDiscount} />;
+  </div>
+  )
 };
 
 export { SalesPage };

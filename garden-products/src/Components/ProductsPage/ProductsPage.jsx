@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./ProductsPage.scss";
 import { PagesContainer } from "../PagesContainer/PagesContainer";
 import { fetchProducts } from "../../requests";
+import { Breadcrumbs } from "../BreadCrumbs/BreadCrumbs";
 
 const ProductsPage = () => {
   const [cards, setProducts] = useState([]);
@@ -10,7 +11,12 @@ const ProductsPage = () => {
     fetchProducts(setProducts);
   }, []);
 
-  return <PagesContainer title="All products" cardsData={cards} />;
+  return (
+    <div>
+      <Breadcrumbs/>
+    <PagesContainer title="All products" cardsData={cards} />;
+    </div>
+  )
 };
 
 export { ProductsPage };

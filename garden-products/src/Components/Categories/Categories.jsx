@@ -3,6 +3,7 @@ import { CategoriesCard } from "../CategoriesCard/CategoriesCard";
 import "./Categories.scss";
 import { fetchCards } from "../../requests";
 import { Link } from 'react-router-dom'
+import { Breadcrumbs } from "../BreadCrumbs/BreadCrumbs";
 
 export const Categories = ({isMainPage = false}) => {
   const [cards, setCards] = useState([]);
@@ -13,6 +14,7 @@ export const Categories = ({isMainPage = false}) => {
 
   return (
     <div className="categories-block">
+      <Breadcrumbs/>
       <p>Categories</p>
       <div className="categories-cards">
         {(isMainPage ? cards.slice(0, 4) : cards).map((card) => (

@@ -20,3 +20,4 @@ const PagesContainer = ({ title, cardsData = [] }) => { // 'этот компо�
   );
 };
 export { PagesContainer }; 
+

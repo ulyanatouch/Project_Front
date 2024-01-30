@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './BreadCrumbs.scss';
 
 const Breadcrumbs = () => {
-  const [breadcrumbs, setBreadcrumbs] = useState(["Main Page", "Categories", "All product", "All sales"]);
+  const [breadcrumbs, setBreadcrumbs] = useState(["Main Page", "Categories", "All products", "All sales"]);
 
   const addBreadcrumb = () => {
     setBreadcrumbs([...breadcrumbs, `test ${breadcrumbs.length + 1}`]);
